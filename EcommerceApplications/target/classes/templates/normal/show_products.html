@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Show Products</title>
+</head>
+<body>
+	<section>
+<!-- 					     show product
+                <div class="col-md-10">
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            <div class="card-columns">
+                               
+                                <div th:each="p :${AllProducts}" class="card product-card">
+                                    <div class="container text-center">
+                                        <img class="card-img-top m-2"  style="max-height: 470px;max-width: 200px;width:auto;"src="img/products/<%=p.getpPhoto()%>" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 th:text="${p.ptitle}" class="card-title"></h5>
+                                        <p th:text="${p.pdesc}"  class="card-text"></p>
+
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <button class="btn custom-bg text-white" onclick="add_to_cart(<%= p.getpId()%> ,'<%= p.getpName()%>' ,<%= p.getPriceAfterApplyingDiscount()%>)">Add to Cart</button>
+                                        <button th:text="${p.price}" class="btn btn-outline-success"> &#8377;/- <span  class="text-secondary discount-label">&#8377;off</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+<!--  		<div class="card" style="margin-left:30px; margin-right:30px;">
+			<div class="card-deck">
+			<div class="card-body">
+			<h1 class="text-center">Your Products</h1> 
+			<div th:each="p :${AllProducts}" class="card mt-3" style="width: 18rem;">
+  				`<img src="..." class="card-img-top" alt="...">
+  				<div class="card-body">
+    			<h5 th:text="${p.ptitle}" class="card-title"></h5>
+    			<p th:text="${p.pdesc}" class="card-text"></p>
+    			<h6 th:text="${p.price}"></h6>
+    			<h6 th:text="${p.discount}"></h6>
+    			<a href="#" class="btn btn-primary">Add Cart</a>
+  			</div>
+			</div>
+			</div>
+			</div> -->
+
+<!-- <div  class="row row-cols-1 row-cols-md-3" >
+  <div th:each="p :${AllProducts}"  class="col mb-4">
+    <div  class="card" >
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 th:text="${p.ptitle}" class="card-title">Card title</h5>
+        <p th:text="${p.pdesc}" class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+     	<h6 th:text="${p.price}"></h6>
+    	<h6 th:text="${p.discount}"></h6>
+    	<a href="#" class="btn btn-primary">Add Cart</a>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+		<div class="card" style="margin-left:30px; margin-right:30px;">
+			<div class="card-body">
+				<h1 class="text-center">All Product</h1>
+				<table class="table table-hover">
+  					<thead>
+    					<tr>
+      						<th scope="col">Product Id</th>
+      						<th scope="col">Product Name</th>
+      						<th scope="col">Product Description</th>
+      						<th scope="col">Product Photo</th>
+      						<th scope="col">Product price</th>
+      						<th scope="col">Product Discount</th>   						
+    						<th scope="col">Action</th>
+    					</tr>
+  					</thead>
+  					<tbody>
+    					<tr th:each="p :${AllProducts}">
+     						<th scope="row" th:text="${'PID'+p.pid}"></th>
+      						<td th:text="${p.ptitle}"></td>
+      						<td th:text="${p.pdesc}"></td>
+      						<td></td>
+      						<td th:text="${p.price}"></td>
+      						<td th:text="${p.discount}"></td>
+      						<td >
+      						<a th:object="${product}" th:href="@{'/user/update'+${p.pid}}" class="btn btn-success btn-sm">Update</a>
+      						<a th:object="${product}"  th:href="@{'/user/delete/'+${p.pid}}" class="btn btn-danger btn-sm">Delete</a>
+      						</td>
+    					</tr>
+					</tbody>
+				</table>
+								
+				</div>
+			</div>
+	</section>
+</body>
+</html>

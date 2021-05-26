@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: EcommerceApplications
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: sumit
+Implementation-Vendor-Id: com.EcommerceApplications
+Build-Jdk: 1.8.0_291
+Implementation-URL: https://spring.io/projects/spring-boot/EcommerceAp
+ plications
+Created-By: Maven Integration for Eclipse
+

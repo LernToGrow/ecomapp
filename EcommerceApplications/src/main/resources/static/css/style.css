@@ -1,0 +1,165 @@
+@charset "ISO-8859-1";
+body{
+	 background: #e2e2e2!important; 
+}
+
+.bg-primary{
+	background: #009688 !important;
+}
+.mycard{
+	padding: 20px;
+	background:#FFFFFF; 
+
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 340px;
+  border: 1px solid #9C9C9C;
+  background-color: white;
+  
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 10px;
+  margin: 15PX;
+ 
+ 
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -60px;
+  text-align: right;
+  
+}
+
+/* slide bar style */
+@media only screen and (max-width: 600px)
+{
+.slidebar{
+	display:none;
+	width: 80% !important;
+	background: white;
+	height: 100vh;
+	position: fixed;
+	padding-top: 20px;
+}
+.content{
+	margin-left: 0%!important;	
+}
+}	
+
+
+.slidebar{
+	width: 18%;
+	background: white;
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;
+	z-index: 99999999999999999;
+}
+.slidebar a{
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+}
+.slidebar a:hover{
+	background: #e2e2e2;
+}
+.slidebar .divider{
+	height: .5px;
+	width: 100%;
+	background: #e2e2e2;
+	margin-top: 10px;
+}
+
+
+
+.content{
+	margin-left: 20%;
+}
+.slidebar .crossbtn
+{
+	position: absolute;
+	top: 0;
+	right: 36px;
+	font-size: 36px;
+	cursor: pointer;
+}
+/* new css */
+}/* 
+
+.admin .card{
+    border: 1px solid #673ab7;    
+}
+
+.admin .card:hover{
+    background: #e2e2e2;
+
+}
+
+.list-group-item.active
+{
+    background: #673ab7!important;
+    border-color: #673ab7!important;
+}
+.discount-label
+{
+    font-size: 13px!important;
+    font-style: italic!important;
+}
+.product-card:hover{
+    background: #e2e2e2;
+}
+.nav-link{
+
+}
+tost
+#toast {
+    min-width: 300px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -125px;
+    background-color: #333;
+    padding: 15px;
+    color: snow;
+    text-align: center;
+    z-index: 1;
+    font-size: 18px;
+    visibility: hidden;
+    box-shadow: 0px 0px 100px #000;
+}
+
+#toast.display {
+    visibility: visible;
+    animation: fadeIn 0.5s,fadeOut 0.5s 2.5s;
+}
+@keyframes fadeIn{
+    from{
+        bottom: 0;
+        opacity: 0;
+
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+
+    }
+
+}
+@keyframes fadeOut{ 
+    form{
+        bottom: 30px;
+        opacity: 1;
+
+    }
+    to{
+        bottom: 0;
+        opacity: 0;
+
+    }
+}
+
+
+ */

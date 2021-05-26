@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Homepage</title>
+</head>
+<body>
+	<section>
+		<div class="card" style="margin-left:30px; margin-right:30px;">
+			<div class="card-body">
+				<h1 class="text-center">Add Category</h1>
+				<div class="container-fluid mt-1">
+					<div class="row">
+						<div class="col-md-8 offset-md-2">
+							<form action="" 
+								th:object="${category}"
+								enctype="multipart/form-data" method="post"
+								th:action="@{/user/process-category}" class="mt-2">
+								<!-- category  title -->
+								<div class="input-group mb-3">
+ 							 		<span class="input-group-text" id="basic-addon1">@</span>
+  									<input required type="text" name="CategoryName" class="form-control" placeholder="Enter Category Title" aria-label="Username" aria-describedby="basic-addon1">
+								</div>
+								
+								<div class="input-group mb-3">
+ 							 		<span class="input-group-text" id="basic-addon1">@</span>
+  									<input required type="text" name="CategoryDesc" class="form-control" placeholder="Enter Category Description" aria-label="Username" aria-describedby="basic-addon1">
+								</div>								
+								<div class="container text-center">
+									<button class="btn btn-outline-primary">Save Category</button>
+								</div>
+								
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
